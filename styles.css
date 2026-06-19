@@ -1,3 +1,7 @@
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
 :root {
   --red: #8d1117;
   --red-bright: #c61f2a;
@@ -11,13 +15,16 @@
   --shadow: 0 24px 70px rgba(20, 12, 10, 0.18);
   --radius: 8px;
 }
-
 * {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+  max-width: 100%;
 }
 .brand-logo {
   width: 80px;
@@ -421,11 +428,8 @@ h3 {
 .section-grid,
 .location-layout {
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
-  gap: clamp(32px, 6vw, 76px);
-  max-width: 1240px;
-  margin: 0 auto;
-  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(24px, 4vw, 60px);
 }
 
 .section-copy p:not(.eyebrow),
@@ -955,16 +959,15 @@ iframe {
   }
 
   .hero {
-    min-height: 94svh;
-    place-items: end start;
-    padding-top: 128px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .hero-panel {
     position: relative;
+    width: 100%;
     right: auto;
     bottom: auto;
-    margin-top: 34px;
   }
 
   .section-grid,
@@ -1046,4 +1049,8 @@ iframe {
   .footer-links {
     display: grid;
   }
+}
+.nav-links {
+  width: 100%;
+  max-width: 100%;
 }
