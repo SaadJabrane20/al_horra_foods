@@ -371,6 +371,7 @@ h3 {
   background: rgba(16, 14, 13, 0.58);
   backdrop-filter: blur(18px);
   box-shadow: var(--shadow);
+  text-align: center;
 }
 
 .hero-panel span {
@@ -652,6 +653,9 @@ h3 {
 }
 
 .metrics div {
+  display: grid;
+  place-items: center;
+  text-align: center;
   padding: 26px 22px;
   border-radius: var(--radius);
   color: var(--white);
@@ -984,6 +988,9 @@ iframe {
   .hero-panel {
     position: relative;
     width: 100%;
+    max-width: 760px;
+    margin-right: auto;
+    margin-left: auto;
     right: auto;
     bottom: auto;
   }
