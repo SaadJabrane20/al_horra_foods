@@ -1039,18 +1039,22 @@ iframe {
     bottom: 14px;
     left: 14px;
   }
-.footer-logo {
-  transition: transform 0.3s ease;
 }
+@media (max-width: 620px) {
+  .footer-logo {
+    transition: transform 0.3s ease;
+  }
 
-.footer-logo:hover {
-  transform: scale(1.08);
-}
+  .footer-logo:hover {
+    transform: scale(1.08);
+  }
+
   .footer-links {
     display: grid;
   }
-}
-.nav-links {
-  width: 100%;
-  max-width: 100%;
+
+  .nav-links {
+    width: 100%;
+    max-width: 100%;
+  }
 }

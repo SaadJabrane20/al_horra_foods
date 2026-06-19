@@ -11,7 +11,12 @@ const year = document.getElementById("year");
 
 body.classList.add("loading");
 year.textContent = new Date().getFullYear();
-
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 860) {
+    navLinks.classList.remove("is-open");
+    navToggle.setAttribute("aria-expanded", "false");
+  }
+});
 window.addEventListener("load", () => {
   window.setTimeout(() => {
     loader.classList.add("is-hidden");
