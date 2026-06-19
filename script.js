@@ -15,11 +15,13 @@ window.addEventListener("resize", () => {
   if (window.innerWidth > 860) {
     navLinks.classList.remove("is-open");
     navToggle.setAttribute("aria-expanded", "false");
+    navToggle.setAttribute("aria-label", "Ouvrir le menu");
   }
 });
 window.addEventListener("load", () => {
   window.setTimeout(() => {
     loader.classList.add("is-hidden");
+    loader.setAttribute("aria-hidden", "true");
     body.classList.remove("loading");
   }, 700);
 });
@@ -31,7 +33,7 @@ const setHeaderState = () => {
 const setParallax = () => {
   if (!parallax) return;
   const offset = Math.min(window.scrollY * 0.13, 90);
-  parallax.style.transform = `translate3d(0, ${offset}px, 0) scale(1.08)`;
+  parallax.style.backgroundPosition = `center calc(50% + ${offset}px)`;
 };
 
 setHeaderState();
@@ -49,12 +51,14 @@ window.addEventListener(
 navToggle.addEventListener("click", () => {
   const isOpen = navLinks.classList.toggle("is-open");
   navToggle.setAttribute("aria-expanded", String(isOpen));
+  navToggle.setAttribute("aria-label", isOpen ? "Fermer le menu" : "Ouvrir le menu");
 });
 
 navLinks.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("is-open");
     navToggle.setAttribute("aria-expanded", "false");
+    navToggle.setAttribute("aria-label", "Ouvrir le menu");
   });
 });
 

@@ -19,6 +19,7 @@ html, body {
 }
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 110px;
 }
 
 *, *::before, *::after {
@@ -70,6 +71,7 @@ textarea {
 .loader.is-hidden {
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
 }
 
 .loader-mark {
@@ -103,6 +105,7 @@ textarea {
 }
 
 .nav {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -949,6 +952,7 @@ iframe {
     top: calc(100% + 10px);
     right: 16px;
     left: 16px;
+    z-index: 120;
     display: grid;
     gap: 6px;
     padding: 14px;
@@ -1084,9 +1088,12 @@ iframe {
     width: auto;
   }
 }
+.site-header {
+  overflow: visible;
+}
+
 .footer,
-section,
-header {
+section {
   overflow-x: hidden;
 }
 
