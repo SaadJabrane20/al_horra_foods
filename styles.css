@@ -19,7 +19,12 @@
 html {
   scroll-behavior: smooth;
 }
-
+.brand-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+}
 body {
   margin: 0;
   color: var(--ink);
@@ -1031,7 +1036,13 @@ iframe {
     bottom: 14px;
     left: 14px;
   }
+.footer-logo {
+  transition: transform 0.3s ease;
+}
 
+.footer-logo:hover {
+  transform: scale(1.08);
+}
   .footer-links {
     display: grid;
   }
